@@ -168,5 +168,5 @@ descoberta-artistas/
 
 ---
 
-**USADO MANUS PARA HOSPEDAGEM**
+**USADO MANUS AGENT PARA HOSPEDAGEM**
 
