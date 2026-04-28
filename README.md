@@ -78,7 +78,7 @@ Compartilhe novos artistas que você descobriu:
 
 ---
 
-## 👥 Artistas Apresentados
+## Artistas Apresentados
 
 1. **The Weeknd** - R&B/Hip-Hop (Canadá)
 2. **Billie Eilish** - Pop/Eletrônico (EUA)
@@ -141,28 +141,28 @@ descoberta-artistas/
 
 ---
 
-## 🎯 Requisitos Atendidos
+##  Requisitos Atendidos
 
-### ✅ Parte 1: Lista de Artistas
-- [x] Mínimo 6 artistas com imagens
-- [x] Descrição curta para cada artista
-- [x] Componente `ArtistCard` reutilizável
-- [x] Lista com ScrollView
+###  Parte 1: Lista de Artistas
+- • Mínimo 6 artistas com imagens
+- • Descrição curta para cada artista
+- • Componente `ArtistCard` reutilizável
+- • Lista com ScrollView
 
-### ✅ Parte 2: Interação e Detalhes
-- [x] Tela de detalhes do artista
-- [x] Navegação entre telas
-- [x] Biografias longas (30+ palavras cada)
-- [x] Mínimo 150 palavras totais
-- [x] Informações adicionais (país, anos ativos, popularidade)
+###  Parte 2: Interação e Detalhes
+- • Tela de detalhes do artista
+- • Navegação entre telas
+- • Biografias longas (30+ palavras cada)
+- • Mínimo 150 palavras totais
+- • nformações adicionais (país, anos ativos, popularidade)
 
-### ✅ Parte 3: Formulário Completo
-- [x] 4 TextInputs (Nome, Email, Comentário, Spotify Link)
-- [x] 2 Pickers (Gênero, País)
-- [x] 2 Sliders (Popularidade, Anos Ativo)
-- [x] 2 Switches (Ativo, Recomendado)
-- [x] 2 Botões (Enviar, Limpar)
-- [x] Validação e feedback visual
+###  Parte 3: Formulário Completo
+- • 4 TextInputs (Nome, Email, Comentário, Spotify Link)
+- • 2 Pickers (Gênero, País)
+- • 2 Sliders (Popularidade, Anos Ativo)
+- • 2 Switches (Ativo, Recomendado)
+- • 2 Botões (Enviar, Limpar)
+- • Validação e feedback visual
 
 ---
 
