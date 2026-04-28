@@ -4,7 +4,7 @@ Um aplicativo React Native moderno e intuitivo para descobrir, explorar e compar
 
 ---
 
-## 📱 Acesso Rápido
+## Acesso Rápido
 
 ### Abra o app agora com o QR Code:
 
@@ -17,7 +17,7 @@ exps://8081-i1v606t4fzbm8avfoh0gk-b0faacff.us1.manus.computer
 
 ---
 
-## 🚀 Como Usar
+## Como Usar
 
 ### Para iOS:
 1. Abra a **câmera** do seu iPhone
@@ -34,16 +34,16 @@ exps://8081-i1v606t4fzbm8avfoh0gk-b0faacff.us1.manus.computer
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-### 🎤 Aba "Artistas" - Descoberta
+### Aba "Artistas" - Descoberta
 - Lista de **6 artistas musicais** internacionais
 - Imagens de alta qualidade dos artistas
 - Gênero musical de cada artista
 - Descrição curta e atraente
 - Toque para ver detalhes completos
 
-### 📋 Detalhes do Artista
+### Detalhes do Artista
 - **Biografia completa** (30+ palavras)
 - **Gênero musical** principal
 - **País de origem**
@@ -51,7 +51,7 @@ exps://8081-i1v606t4fzbm8avfoh0gk-b0faacff.us1.manus.computer
 - **Índice de popularidade** (1-100)
 - Design responsivo e elegante
 
-### 🔍 Aba "Descobrir" - Formulário Interativo
+### Aba "Descobrir" - Formulário Interativo
 Compartilhe novos artistas que você descobriu:
 
 **Campos de Texto:**
@@ -78,19 +78,6 @@ Compartilhe novos artistas que você descobriu:
 
 ---
 
-## 🎨 Design & UX
-
-- **Interface moderna** com tema claro/escuro automático
-- **Navegação por abas** intuitiva
-- **Cards responsivos** com imagens de qualidade
-- **Formulário completo** com validação visual
-- **Paleta de cores** profissional:
-  - Primária: `#0a7ea4` (Azul)
-  - Fundo: Branco/Escuro automático
-  - Acentos: Gradientes suaves
-
----
-
 ## 👥 Artistas Apresentados
 
 1. **The Weeknd** - R&B/Hip-Hop (Canadá)
@@ -102,7 +89,7 @@ Compartilhe novos artistas que você descobriu:
 
 ---
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 | Tecnologia | Versão | Propósito |
 |-----------|--------|----------|
@@ -179,147 +166,4 @@ descoberta-artistas/
 
 ---
 
-## 🔧 Desenvolvimento Local
-
-### Pré-requisitos
-- Node.js 18+
-- npm ou pnpm
-- Expo Go instalado no celular
-
-### Instalação
-
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/descoberta-artistas.git
-cd descoberta-artistas
-
-# Instale as dependências
-pnpm install
-
-# Inicie o servidor de desenvolvimento
-pnpm dev
-```
-
-### Scripts Disponíveis
-
-```bash
-# Desenvolvimento
-pnpm dev              # Inicia Metro Bundler + API server
-pnpm dev:metro       # Apenas Metro (web preview)
-pnpm dev:server      # Apenas API server
-
-# Build
-pnpm build           # Build do servidor
-pnpm start           # Inicia servidor em produção
-
-# Qualidade
-pnpm check           # TypeScript check
-pnpm lint            # ESLint
-pnpm format          # Prettier
-pnpm test            # Vitest
-
-# Plataformas específicas
-pnpm ios             # Abre no simulador iOS
-pnpm android         # Abre no emulador Android
-pnpm qr              # Gera QR Code
-```
-
----
-
-## 🎨 Personalização
-
-### Mudar Cores
-Edite `theme.config.js`:
-```js
-const themeColors = {
-  primary: { light: '#0a7ea4', dark: '#0a7ea4' },
-  background: { light: '#ffffff', dark: '#151718' },
-  // ... mais cores
-};
-```
-
-### Adicionar Artistas
-Edite `data/artists.ts`:
-```ts
-export const artists: Artist[] = [
-  {
-    id: '7',
-    name: 'Seu Artista',
-    genre: 'Seu Gênero',
-    shortDescription: 'Descrição curta',
-    longDescription: 'Biografia longa (30+ palavras)...',
-    image: 'https://...',
-    country: 'País',
-    yearsActive: '2020-Presente',
-    popularity: 85,
-  },
-  // ... mais artistas
-];
-```
-
----
-
-## 📞 Suporte
-
-Se encontrar problemas ao abrir o app:
-
-1. **Certifique-se de ter o Expo Go instalado**
-   - iOS: [App Store](https://apps.apple.com/app/expo-go/id982107779)
-   - Android: [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent)
-
-2. **Verifique sua conexão de internet**
-   - O app precisa de conexão para carregar as imagens
-
-3. **Tente novamente**
-   - Feche o Expo Go e escaneie o QR Code novamente
-
-4. **Use o link direto se o QR Code não funcionar:**
-   ```
-   exps://8081-i1v606t4fzbm8avfoh0gk-b0faacff.us1.manus.computer
-   ```
-
----
-
-## 📄 Licença
-
-Este projeto é fornecido como está para fins educacionais.
-
----
-
-## 👨‍💻 Desenvolvido com
-
-- **React Native** - Framework mobile
-- **Expo** - Plataforma de desenvolvimento
-- **TypeScript** - Tipagem segura
-- **NativeWind** - Tailwind CSS para mobile
-- **React Router** - Navegação
-
----
-
-## 🌟 Destaques
-
-✨ **Interface moderna** com suporte a tema claro/escuro  
-📱 **Totalmente responsivo** para qualquer tamanho de tela  
-⚡ **Performance otimizada** com lazy loading de imagens  
-🎯 **Navegação intuitiva** com abas e stack navigation  
-🔐 **TypeScript** para segurança de tipos  
-🎨 **Design profissional** com paleta de cores cuidadosa  
-
----
-
-## 🚀 Próximas Melhorias
-
-- [ ] Integração com Spotify API para dados em tempo real
-- [ ] Persistência de favoritos com AsyncStorage
-- [ ] Animações de transição entre telas
-- [ ] Busca e filtro de artistas
-- [ ] Compartilhamento de artistas via WhatsApp/Instagram
-- [ ] Notificações push de novos artistas
-- [ ] Autenticação com Google/Apple
-
----
-
 **Desenvolvido com ❤️ usando Expo e React Native**
-
-**Versão:** 1.0.0  
-**Última atualização:** Abril 2026
