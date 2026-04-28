@@ -12,4 +12,3 @@ const themeColors = {
 };
 
 module.exports = { themeColors };
-aba
