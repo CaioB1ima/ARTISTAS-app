@@ -13,4 +13,3 @@ export default defineConfig({
     url: connectionString,
   },
 });
- ava
