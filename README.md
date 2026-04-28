@@ -166,4 +166,4 @@ descoberta-artistas/
 
 ---
 
-**Desenvolvido com ❤️ usando Expo e React Native**
+**Desenvolvido usando Expo e React Native**
