@@ -11,7 +11,7 @@ Um aplicativo React Native moderno e intuitivo para descobrir, explorar e compar
 ![Expo QR Code](./QR_CODE.png)
 
 ## Ou use o link: 
-(https://img.shields.io/badge/Abrir%20no%20Expo%20Go-000?style=for-the-badge&logo=expo )](exps://8081-i1v606t4fzbm8avfoh0gk-b0faacff.us1.manus.computer) **
+[exps://8081-i1v606t4fzbm8avfoh0gk-b0faacff.us1.manus.computer] **
 ---
 
 ## Como Usar
