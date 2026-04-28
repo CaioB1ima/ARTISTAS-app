@@ -169,4 +169,5 @@ descoberta-artistas/
 ---
 
 **USADO MANUS AGENT PARA HOSPEDAGEM**
+- Tive Problemas ao gerar URL no EXPO EAS (Expo Application Services)
 
