@@ -15,3 +15,4 @@ declare const themeConfig: {
 };
 
 export default themeConfig;
+ava
