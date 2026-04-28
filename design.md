@@ -1,46 +1,47 @@
-# Design - Atores & Formulários App
+# Design - Descoberta de Artistas Musicais App
 
 ## Visão Geral
 
-Aplicativo React Native com Expo que apresenta uma lista de atores/atrizes com imagens, descrições detalhadas, e um formulário completo com múltiplos componentes de entrada.
+Aplicativo React Native com Expo que apresenta uma lista de artistas musicais com imagens, biografias detalhadas, e um formulário para descoberta de novos artistas com múltiplos componentes de entrada.
 
 ## Telas
 
-### Tela 1: Home - Lista de Atores (Parte 1 & 2)
-- **Objetivo**: Exibir lista de atores com imagens e descrições
+### Tela 1: Home - Lista de Artistas (Parte 1 & 2)
+- **Objetivo**: Exibir lista de artistas musicais com imagens e descrições
 - **Conteúdo Principal**:
-  - Header com título "Atores & Atrizes"
-  - ScrollView com lista de cards de atores
-  - Cada card contém: imagem (quadrada), nome, descrição curta
-  - Mínimo 5 atores com 6 imagens no total
-  - Ao tocar em um ator, navega para tela de detalhes
+  - Header com título "Descoberta de Artistas"
+  - ScrollView com lista de cards de artistas
+  - Cada card contém: imagem (foto do artista), nome, gênero musical, descrição curta
+  - Mínimo 6 artistas com 6 imagens no total
+  - Ao tocar em um artista, navega para tela de detalhes
 
-### Tela 2: Detalhes do Ator (Parte 2)
-- **Objetivo**: Mostrar informações detalhadas do ator selecionado
+### Tela 2: Detalhes do Artista (Parte 2)
+- **Objetivo**: Mostrar informações detalhadas do artista selecionado
 - **Conteúdo Principal**:
-  - Imagem grande do ator
+  - Imagem grande do artista
   - Nome em destaque
-  - Descrição longa (mínimo 30 palavras)
+  - Gênero musical, país de origem, anos ativo, popularidade
+  - Biografia longa (mínimo 30 palavras)
   - Botão voltar
-  - Mínimo 5 atores com descrições detalhadas
+  - Mínimo 6 artistas com biografias detalhadas
 
 ### Tela 3: Formulário (Parte 3)
-- **Objetivo**: Coletar informações com múltiplos tipos de entrada
+- **Objetivo**: Coletar informações para descobrir novos artistas
 - **Componentes Obrigatórios**:
-  - Título: "Cadastro de Ator"
-  - 4 TextInputs: Nome, Email, Bio, Telefone
-  - 2 Pickers: Nacionalidade, Gênero
-  - 2 Sliders: Experiência (anos), Popularidade (1-10)
-  - 2 Switches: Ativo, Disponível para Trabalho
+  - Título: "Descobrir Artista"
+  - 4 TextInputs: Nome do Artista, Email, Comentário, Link do Spotify
+  - 2 Pickers: Gênero Musical, País de Origem
+  - 2 Sliders: Popularidade (1-10), Anos Ativo
+  - 2 Switches: Artista Ativo, Recomendado
   - 2 Botões: Enviar, Limpar
 
 ## Fluxo de Navegação
 
 ```
-Home (Lista de Atores)
+Home (Lista de Artistas)
   ↓
-  → Toque em ator → Detalhes do Ator
-  → Aba "Formulário" → Tela de Cadastro
+  → Toque em artista → Detalhes do Artista
+  → Aba "Descobrir" → Tela de Descoberta
 ```
 
 ## Paleta de Cores
@@ -54,15 +55,15 @@ Home (Lista de Atores)
 
 ## Componentes Principais
 
-1. **ActorCard**: Card com imagem, nome e descrição curta
-2. **ActorDetail**: Tela de detalhes com informações completas
-3. **FormScreen**: Formulário com todos os componentes solicitados
-4. **TabNavigation**: Navegação entre Home, Detalhes e Formulário
+1. **ArtistCard**: Card com imagem, nome, gênero e descrição curta
+2. **ArtistDetail**: Tela de detalhes com informações completas do artista
+3. **FormScreen**: Formulário para descobrir novos artistas
+4. **TabNavigation**: Navegação entre Home, Detalhes e Descoberta
 
 ## Requisitos de Conteúdo
 
-- **Mínimo 5 atores** na lista principal
-- **6 imagens no total** (distribuídas entre os atores)
-- **Mínimo 150 palavras** no total das descrições longas
-- **Descrições mínimo 30 palavras** cada uma (Parte 2)
+- **Mínimo 6 artistas** na lista principal
+- **6 imagens no total** (distribuídas entre os artistas)
+- **Mínimo 150 palavras** no total das biografias
+- **Biografias mínimo 30 palavras** cada uma (Parte 2)
 - **Formulário completo** com todos os componentes especificados

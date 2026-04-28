@@ -13,51 +13,51 @@ import { ScreenContainer } from '@/components/screen-container';
 import { useColors } from '@/hooks/use-colors';
 
 interface FormData {
-  name: string;
+  artistName: string;
   email: string;
-  bio: string;
-  phone: string;
-  nationality: string;
-  gender: string;
-  experience: number;
+  comment: string;
+  spotifyLink: string;
+  genre: string;
+  country: string;
   popularity: number;
+  yearsActive: number;
   isActive: boolean;
-  isAvailable: boolean;
+  isRecommended: boolean;
 }
 
 export default function FormScreen() {
   const colors = useColors();
   const [formData, setFormData] = useState<FormData>({
-    name: '',
+    artistName: '',
     email: '',
-    bio: '',
-    phone: '',
-    nationality: 'Brasileira',
-    gender: 'Não especificado',
-    experience: 5,
+    comment: '',
+    spotifyLink: '',
+    genre: 'Pop',
+    country: 'Brasil',
     popularity: 5,
+    yearsActive: 5,
     isActive: true,
-    isAvailable: true,
+    isRecommended: false,
   });
 
   const handleSubmit = () => {
     alert(
-      `Formulário enviado!\n\nNome: ${formData.name}\nEmail: ${formData.email}\nBio: ${formData.bio}\nTelefone: ${formData.phone}\nNacionalidade: ${formData.nationality}\nGênero: ${formData.gender}\nExperiência: ${Math.round(formData.experience)} anos\nPopularidade: ${Math.round(formData.popularity)}/10\nAtivo: ${formData.isActive}\nDisponível: ${formData.isAvailable}`
+      `Artista Descoberto!\n\nNome: ${formData.artistName}\nEmail: ${formData.email}\nComentário: ${formData.comment}\nSpotify: ${formData.spotifyLink}\nGênero: ${formData.genre}\nPaís: ${formData.country}\nPopularidade: ${Math.round(formData.popularity)}/10\nAnos Ativo: ${Math.round(formData.yearsActive)}\nAtivo: ${formData.isActive}\nRecomendado: ${formData.isRecommended}`
     );
   };
 
   const handleReset = () => {
     setFormData({
-      name: '',
+      artistName: '',
       email: '',
-      bio: '',
-      phone: '',
-      nationality: 'Brasileira',
-      gender: 'Não especificado',
-      experience: 5,
+      comment: '',
+      spotifyLink: '',
+      genre: 'Pop',
+      country: 'Brasil',
       popularity: 5,
+      yearsActive: 5,
       isActive: true,
-      isAvailable: true,
+      isRecommended: false,
     });
   };
 
@@ -68,16 +68,16 @@ export default function FormScreen() {
           {/* Título */}
           <View>
             <Text className="text-3xl font-bold text-foreground">
-              Cadastro de Ator
+              Descobrir Artista
             </Text>
             <Text className="text-sm text-muted mt-1">
-              Preencha os dados abaixo
+              Compartilhe um novo artista que você descobriu
             </Text>
           </View>
 
-          {/* TextInput 1: Nome */}
+          {/* TextInput 1: Nome do Artista */}
           <View className="gap-2">
-            <Text className="text-sm font-semibold text-foreground">Nome</Text>
+            <Text className="text-sm font-semibold text-foreground">Nome do Artista</Text>
             <TextInput
               style={{
                 borderWidth: 1,
@@ -88,11 +88,11 @@ export default function FormScreen() {
                 color: colors.foreground,
                 backgroundColor: colors.surface,
               }}
-              placeholder="Digite seu nome"
+              placeholder="Digite o nome do artista"
               placeholderTextColor={colors.muted}
-              value={formData.name}
+              value={formData.artistName}
               onChangeText={(text) =>
-                setFormData({ ...formData, name: text })
+                setFormData({ ...formData, artistName: text })
               }
             />
           </View>
@@ -120,9 +120,9 @@ export default function FormScreen() {
             />
           </View>
 
-          {/* TextInput 3: Bio */}
+          {/* TextInput 3: Comentário */}
           <View className="gap-2">
-            <Text className="text-sm font-semibold text-foreground">Bio</Text>
+            <Text className="text-sm font-semibold text-foreground">Comentário</Text>
             <TextInput
               style={{
                 borderWidth: 1,
@@ -135,21 +135,21 @@ export default function FormScreen() {
                 minHeight: 80,
                 textAlignVertical: 'top',
               }}
-              placeholder="Conte sobre você"
+              placeholder="Conte por que você gosta deste artista"
               placeholderTextColor={colors.muted}
               multiline
               numberOfLines={4}
-              value={formData.bio}
+              value={formData.comment}
               onChangeText={(text) =>
-                setFormData({ ...formData, bio: text })
+                setFormData({ ...formData, comment: text })
               }
             />
           </View>
 
-          {/* TextInput 4: Telefone */}
+          {/* TextInput 4: Link do Spotify */}
           <View className="gap-2">
             <Text className="text-sm font-semibold text-foreground">
-              Telefone
+              Link do Spotify
             </Text>
             <TextInput
               style={{
@@ -161,20 +161,19 @@ export default function FormScreen() {
                 color: colors.foreground,
                 backgroundColor: colors.surface,
               }}
-              placeholder="(11) 99999-9999"
+              placeholder="https://open.spotify.com/artist/..."
               placeholderTextColor={colors.muted}
-              keyboardType="phone-pad"
-              value={formData.phone}
+              value={formData.spotifyLink}
               onChangeText={(text) =>
-                setFormData({ ...formData, phone: text })
+                setFormData({ ...formData, spotifyLink: text })
               }
             />
           </View>
 
-          {/* Picker 1: Nacionalidade */}
+          {/* Picker 1: Gênero Musical */}
           <View className="gap-2">
             <Text className="text-sm font-semibold text-foreground">
-              Nacionalidade
+              Gênero Musical
             </Text>
             <View
               style={{
@@ -186,76 +185,58 @@ export default function FormScreen() {
               }}
             >
               <Picker
-                selectedValue={formData.nationality}
+                selectedValue={formData.genre}
                 onValueChange={(value: string) =>
-                  setFormData({ ...formData, nationality: value })
+                  setFormData({ ...formData, genre: value })
                 }
                 style={{ color: colors.foreground }}
               >
-                <Picker.Item label="Brasileira" value="Brasileira" />
-                <Picker.Item label="Americana" value="Americana" />
-                <Picker.Item label="Europeia" value="Europeia" />
-                <Picker.Item label="Asiática" value="Asiática" />
-                <Picker.Item label="Africana" value="Africana" />
-                <Picker.Item label="Outra" value="Outra" />
-              </Picker>
-            </View>
-          </View>
-
-          {/* Picker 2: Gênero */}
-          <View className="gap-2">
-            <Text className="text-sm font-semibold text-foreground">
-              Gênero
-            </Text>
-            <View
-              style={{
-                borderWidth: 1,
-                borderColor: colors.border,
-                borderRadius: 8,
-                backgroundColor: colors.surface,
-                overflow: 'hidden',
-              }}
-            >
-              <Picker
-                selectedValue={formData.gender}
-                onValueChange={(value: string) =>
-                  setFormData({ ...formData, gender: value })
-                }
-                style={{ color: colors.foreground }}
-              >
-                <Picker.Item label="Não especificado" value="Não especificado" />
-                <Picker.Item label="Masculino" value="Masculino" />
-                <Picker.Item label="Feminino" value="Feminino" />
+                <Picker.Item label="Pop" value="Pop" />
+                <Picker.Item label="Rock" value="Rock" />
+                <Picker.Item label="Hip-Hop/Rap" value="Hip-Hop/Rap" />
+                <Picker.Item label="R&B" value="R&B" />
+                <Picker.Item label="Eletrônico" value="Eletrônico" />
+                <Picker.Item label="Country" value="Country" />
+                <Picker.Item label="Reggaeton" value="Reggaeton" />
                 <Picker.Item label="Outro" value="Outro" />
               </Picker>
             </View>
           </View>
 
-          {/* Slider 1: Experiência */}
+          {/* Picker 2: País de Origem */}
           <View className="gap-2">
-            <View className="flex-row justify-between items-center">
-              <Text className="text-sm font-semibold text-foreground">
-                Experiência (anos)
-              </Text>
-              <Text className="text-sm font-bold text-primary">
-                {Math.round(formData.experience)}
-              </Text>
+            <Text className="text-sm font-semibold text-foreground">
+              País de Origem
+            </Text>
+            <View
+              style={{
+                borderWidth: 1,
+                borderColor: colors.border,
+                borderRadius: 8,
+                backgroundColor: colors.surface,
+                overflow: 'hidden',
+              }}
+            >
+              <Picker
+                selectedValue={formData.country}
+                onValueChange={(value: string) =>
+                  setFormData({ ...formData, country: value })
+                }
+                style={{ color: colors.foreground }}
+              >
+                <Picker.Item label="Brasil" value="Brasil" />
+                <Picker.Item label="Estados Unidos" value="Estados Unidos" />
+                <Picker.Item label="Canadá" value="Canadá" />
+                <Picker.Item label="Reino Unido" value="Reino Unido" />
+                <Picker.Item label="Espanha" value="Espanha" />
+                <Picker.Item label="França" value="França" />
+                <Picker.Item label="Alemanha" value="Alemanha" />
+                <Picker.Item label="Outro" value="Outro" />
+              </Picker>
             </View>
-            <Slider
-              style={{ height: 40 }}
-              minimumValue={0}
-              maximumValue={50}
-              step={1}
-              value={formData.experience}
-              onValueChange={(value: number) =>
-                setFormData({ ...formData, experience: value })
-              }
-              minimumTrackTintColor="#0a7ea4"
-              maximumTrackTintColor={colors.border}
-            />
           </View>
 
-          {/* Slider 2: Popularidade */}
+          {/* Slider 1: Popularidade */}
           <View className="gap-2">
             <View className="flex-row justify-between items-center">
               <Text className="text-sm font-semibold text-foreground">
@@ -279,10 +260,34 @@ export default function FormScreen() {
             />
           </View>
 
+          {/* Slider 2: Anos Ativo */}
+          <View className="gap-2">
+            <View className="flex-row justify-between items-center">
+              <Text className="text-sm font-semibold text-foreground">
+                Anos Ativo
+              </Text>
+              <Text className="text-sm font-bold text-primary">
+                {Math.round(formData.yearsActive)}
+              </Text>
+            </View>
+            <Slider
+              style={{ height: 40 }}
+              minimumValue={0}
+              maximumValue={70}
+              step={1}
+              value={formData.yearsActive}
+              onValueChange={(value: number) =>
+                setFormData({ ...formData, yearsActive: value })
+              }
+              minimumTrackTintColor="#0a7ea4"
+              maximumTrackTintColor={colors.border}
+            />
+          </View>
+
           {/* Switch 1: Ativo */}
           <View className="flex-row items-center justify-between bg-surface rounded-lg p-4 border border-border">
             <Text className="text-sm font-semibold text-foreground">
-              Ativo
+              Artista Ativo
             </Text>
             <Switch
               value={formData.isActive}
@@ -293,15 +298,15 @@ export default function FormScreen() {
             />
           </View>
 
-          {/* Switch 2: Disponível para Trabalho */}
+          {/* Switch 2: Recomendado */}
           <View className="flex-row items-center justify-between bg-surface rounded-lg p-4 border border-border">
             <Text className="text-sm font-semibold text-foreground">
-              Disponível para Trabalho
+              Recomendado
             </Text>
             <Switch
-              value={formData.isAvailable}
+              value={formData.isRecommended}
               onValueChange={(value) =>
-                setFormData({ ...formData, isAvailable: value })
+                setFormData({ ...formData, isRecommended: value })
               }
               trackColor={{ false: colors.border, true: '#0a7ea4' }}
             />

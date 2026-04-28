@@ -28,8 +28,8 @@ const schemeFromBundleId = `manus${timestamp}`;
 
 const env = {
   // App branding - update these values directly (do not use env vars)
-  appName: "Atores & Atrizes",
-  appSlug: "atores-app",
+  appName: "Descoberta de Artistas",
+  appSlug: "descoberta-artistas",
   // S3 URL of the app logo - set this to the URL returned by generate_image when creating custom logo
   // Leave empty to use the default icon from assets/images/icon.png
   logoUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663212298902/6cnUDkfKnjteVEab6dboZX/icon-89WCtGfyqAV6y5bwncshKH.webp",

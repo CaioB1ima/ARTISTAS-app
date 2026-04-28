@@ -1,16 +1,16 @@
 import { ScrollView, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { ScreenContainer } from '@/components/screen-container';
-import { ActorCard } from '@/components/actor-card';
-import { actors } from '@/data/actors';
+import { ArtistCard } from '@/components/artist-card';
+import { artists } from '@/data/artists';
 
 export default function HomeScreen() {
   const router = useRouter();
 
-  const handleActorPress = (actorId: string) => {
+  const handleArtistPress = (artistId: string) => {
     router.push({
-      pathname: '/(tabs)/actor-detail',
-      params: { id: actorId },
+      pathname: '/(tabs)/artist-detail',
+      params: { id: artistId },
     });
   };
 
@@ -21,21 +21,22 @@ export default function HomeScreen() {
           {/* Header */}
           <View className="mb-4">
             <Text className="text-3xl font-bold text-foreground">
-              Atores & Atrizes
+              Descoberta de Artistas
             </Text>
             <Text className="text-sm text-muted mt-1">
-              Conheça os melhores atores do cinema
+              Conheça os maiores artistas da música
             </Text>
           </View>
 
-          {/* Lista de Atores */}
-          {actors.map((actor) => (
-            <ActorCard
-              key={actor.id}
-              name={actor.name}
-              shortDescription={actor.shortDescription}
-              image={actor.image}
-              onPress={() => handleActorPress(actor.id)}
+          {/* Lista de Artistas */}
+          {artists.map((artist) => (
+            <ArtistCard
+              key={artist.id}
+              name={artist.name}
+              genre={artist.genre}
+              shortDescription={artist.shortDescription}
+              image={artist.image}
+              onPress={() => handleArtistPress(artist.id)}
             />
           ))}
         </View>
