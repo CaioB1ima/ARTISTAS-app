@@ -168,5 +168,5 @@ descoberta-artistas/
 
 ---
 
-**USADO MANUS AGENT PARA HOSPEDAGEM e concerto de erros**
+**USADO MANUS AGENT PARA HOSPEDAGEM E SINTAXE DE ERROS**
 - Tive Problemas ao gerar URL no EXPO EAS (Expo Application Services)
