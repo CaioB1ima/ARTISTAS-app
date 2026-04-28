@@ -144,25 +144,25 @@ descoberta-artistas/
 ##  Requisitos Atendidos
 
 ###  Parte 1: Lista de Artistas
-- • Mínimo 6 artistas com imagens
-- • Descrição curta para cada artista
-- • Componente `ArtistCard` reutilizável
-- • Lista com ScrollView
+-  Mínimo 6 artistas com imagens
+-  Descrição curta para cada artista
+-  Componente `ArtistCard` reutilizável
+-  Lista com ScrollView
 
 ###  Parte 2: Interação e Detalhes
-- • Tela de detalhes do artista
-- • Navegação entre telas
-- • Biografias longas (30+ palavras cada)
-- • Mínimo 150 palavras totais
-- • nformações adicionais (país, anos ativos, popularidade)
+-  Tela de detalhes do artista
+-  Navegação entre telas
+-  Biografias longas (30+ palavras cada)
+-  Mínimo 150 palavras totais
+-  nformações adicionais (país, anos ativos, popularidade)
 
 ###  Parte 3: Formulário Completo
-- • 4 TextInputs (Nome, Email, Comentário, Spotify Link)
-- • 2 Pickers (Gênero, País)
-- • 2 Sliders (Popularidade, Anos Ativo)
-- • 2 Switches (Ativo, Recomendado)
-- • 2 Botões (Enviar, Limpar)
-- • Validação e feedback visual
+-  4 TextInputs (Nome, Email, Comentário, Spotify Link)
+-  2 Pickers (Gênero, País)
+-  2 Sliders (Popularidade, Anos Ativo)
+-  2 Switches (Ativo, Recomendado)
+-  2 Botões (Enviar, Limpar)
+-  Validação e feedback visual
 
 ---
 
