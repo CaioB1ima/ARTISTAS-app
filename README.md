@@ -10,7 +10,6 @@ Um aplicativo React Native moderno e intuitivo para descobrir, explorar e compar
 
 ![Expo QR Code](./QR_CODE.png)
 
-```
 
 ---
 
