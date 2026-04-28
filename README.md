@@ -1,4 +1,4 @@
-# 🎵 Descoberta de Artistas Musicais
+# Descoberta de Artistas Musicais
 
 Um aplicativo React Native moderno e intuitivo para descobrir, explorar e compartilhar seus artistas musicais favoritos. Desenvolvido com **Expo SDK 54**, **TypeScript** e **React 19**.
 
@@ -104,7 +104,7 @@ Compartilhe novos artistas que você descobriu:
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 descoberta-artistas/
