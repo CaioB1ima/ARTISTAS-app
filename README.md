@@ -165,5 +165,8 @@ descoberta-artistas/
 ---
 
 **Desenvolvido usando Expo e React Native**
+
+---
+
 **USADO MANUS PARA HOSPEDAGEM**
 
