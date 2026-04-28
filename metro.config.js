@@ -9,3 +9,4 @@ module.exports = withNativeWind(config, {
   // This fixes iOS styling issues in development mode
   forceWriteFileSystem: true,
 });
+ ava
