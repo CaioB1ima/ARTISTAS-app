@@ -10,10 +10,10 @@ Um aplicativo React Native moderno e intuitivo para descobrir, explorar e compar
 
 ![Expo QR Code](./QR_CODE.png)
 
-## Ou use o link: 
----
+## Ou use o link
+```
 exps://8081-i1v606t4fzbm8avfoh0gk-b0faacff.us1.manus.computer
-
+```
 ---
 ## Como Usar
 
