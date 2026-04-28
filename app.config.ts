@@ -127,4 +127,4 @@ const config: ExpoConfig = {
   },
 };
 
-export default config; ava
+export default config;
