@@ -4,6 +4,19 @@ Este projeto é a evolução do aplicativo de descoberta de artistas, agora inte
 
 ---
 
+## 📱 Acesso Rápido
+
+### Abra o app agora com o QR Code:
+
+![Expo QR Code](https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=exp://2tbgfqg-anonymous-8081.exp.direct)
+
+### Ou use o link direto:
+```
+exp://2tbgfqg-anonymous-8081.exp.direct
+```
+
+---
+
 ## 🚀 Novas Funcionalidades (Segunda Parte)
 
 ### 1. Autenticação Firebase
