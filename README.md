@@ -1,172 +1,73 @@
-# Descoberta de Artistas Musicais
+# Descoberta de Artistas Musicais - Parte 2
 
-Um aplicativo React Native moderno e intuitivo para descobrir, explorar e compartilhar seus artistas musicais favoritos. Desenvolvido com **Expo SDK 54**, **TypeScript** e **React 19**.
-
----
-
-## Acesso Rápido
-
-### Abra o app agora com o QR Code:
-
-![Expo QR Code](./QR_CODE.png)
-
-## Ou use o link
-```
-exps://8081-i1v606t4fzbm8avfoh0gk-b0faacff.us1.manus.computer
-```
----
-## Como Usar
-
-### Para iOS:
-1. Abra a **câmera** do seu iPhone
-2. Aponte para o **QR Code** acima
-3. Toque na notificação que aparecer
-4. O **Expo Go** abrirá automaticamente com o app
-
-### Para Android:
-1. Instale o **[Expo Go](https://play.google.com/store/apps/details?id=host.exp.exponent)** (Google Play)
-2. Abra o **Expo Go**
-3. Toque em **"Scan QR Code"**
-4. Aponte para o **QR Code** acima
-5. O app carregará automaticamente
+Este projeto é a evolução do aplicativo de descoberta de artistas, agora integrando funcionalidades avançadas como autenticação Firebase, navegação complexa e consumo de API externa.
 
 ---
 
-## Funcionalidades
+## 🚀 Novas Funcionalidades (Segunda Parte)
 
-### Aba "Artistas" - Descoberta
-- Lista de **6 artistas musicais** internacionais
-- Imagens de alta qualidade dos artistas
-- Gênero musical de cada artista
-- Descrição curta e atraente
-- Toque para ver detalhes completos
+### 1. Autenticação Firebase
+- **Login e Registro**: Sistema completo de autenticação usando Firebase Auth.
+- **Persistência**: O estado do usuário é mantido entre sessões.
 
-### Detalhes do Artista
-- **Biografia completa** (30+ palavras)
-- **Gênero musical** principal
-- **País de origem**
-- **Anos ativos** na indústria
-- **Índice de popularidade** (1-100)
-- Design responsivo e elegante
+### 2. Navegação Avançada
+- **Stack Navigation**: Gerencia o fluxo entre a lista de artistas e os detalhes.
+- **Drawer Navigation**: Menu lateral para acesso rápido ao Início e Perfil.
+- **Fluxo Condicional**: Telas de autenticação separadas do conteúdo principal.
 
-### Aba "Descobrir" - Formulário Interativo
-Compartilhe novos artistas que você descobriu:
+### 3. Integração com API e Hooks
+- **Hook Customizado (`useFetchArtists`)**: Lógica reutilizável para busca de dados.
+- **API Pública**: Consumo de dados da JSONPlaceholder para listar artistas/usuários.
+- **Loading State**: Feedback visual com `ActivityIndicator` durante o carregamento.
 
-**Campos de Texto:**
-- Nome do Artista
-- Email para contato
-- Comentário pessoal
-- Link do Spotify
-
-**Seletores:**
-- Gênero Musical (Pop, Rock, Hip-Hop, R&B, Eletrônico, Country, Reggaeton, Outro)
-- País de Origem (Brasil, EUA, Canadá, Reino Unido, Espanha, França, Alemanha, Outro)
-
-**Controles Deslizantes:**
-- Popularidade (1-10)
-- Anos Ativo (0-70)
-
-**Interruptores:**
-- Artista Ativo
-- Recomendado
-
-**Ações:**
-- Botão "Enviar" para submeter dados
-- Botão "Limpar" para resetar formulário
+### 4. Persistência com Firestore
+- **Perfil do Usuário**: Dados como data de criação e email são armazenados e recuperados do Firebase Firestore.
 
 ---
 
-## Artistas Apresentados
+## 🛠️ Requisitos Técnicos Atendidos
 
-1. **The Weeknd** - R&B/Hip-Hop (Canadá)
-2. **Billie Eilish** - Pop/Eletrônico (EUA)
-3. **Bad Bunny** - Reggaeton/Trap Latino (Porto Rico)
-4. **Ariana Grande** - Pop/R&B (EUA)
-5. **Drake** - Hip-Hop/Rap (Canadá)
-6. **Taylor Swift** - Pop/Country (EUA)
-
----
-
-## Stack Tecnológico
-
-| Tecnologia | Versão | Propósito |
-|-----------|--------|----------|
-| **React Native** | 0.81.5 | Framework mobile |
-| **Expo** | 54.0.29 | Plataforma de desenvolvimento |
-| **TypeScript** | 5.9.3 | Tipagem estática |
-| **React** | 19.1.0 | UI library |
-| **Expo Router** | 6.0.19 | Navegação |
-| **NativeWind** | 4.2.1 | Tailwind CSS para React Native |
-| **React Query** | 5.90.12 | Gerenciamento de dados |
-| **Reanimated** | 4.1.6 | Animações |
+| Requisito | Implementação |
+|-----------|---------------|
+| **Hooks** | Uso de `useState`, `useEffect` e o custom hook `useFetchArtists`. |
+| **Navegação** | Implementação de `Stack` e `Drawer` usando React Navigation. |
+| **Loading** | Componente `ActivityIndicator` controlado por estado. |
+| **Telas** | Login/Registro, Dashboard, Detalhes e Perfil. |
+| **API** | Integração com `https://jsonplaceholder.typicode.com/users`. |
+| **Firebase** | Auth para login e Firestore para dados de perfil. |
 
 ---
 
-## Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
 ```
-descoberta-artistas/
-├── app/
-│   ├── (tabs)/
-│   │   ├── index.tsx              # Tela inicial - Lista de artistas
-│   │   ├── artist-detail.tsx      # Detalhes do artista
-│   │   ├── form.tsx               # Formulário de descoberta
-│   │   └── _layout.tsx            # Navegação por abas
-│   ├── _layout.tsx                # Layout raiz com providers
-│   └── oauth/                     # Callbacks de autenticação
-├── components/
-│   ├── artist-card.tsx            # Card do artista
-│   ├── screen-container.tsx       # Wrapper de tela com SafeArea
-│   └── ui/
-│       └── icon-symbol.tsx        # Ícones da navegação
-├── data/
-│   └── artists.ts                 # Dados dos artistas
-├── hooks/
-│   ├── use-colors.ts              # Hook de cores do tema
-│   ├── use-color-scheme.ts        # Detecção de tema
-│   └── use-auth.ts                # Autenticação
-├── lib/
-│   ├── utils.ts                   # Utilitários (cn, etc)
-│   └── theme-provider.tsx         # Provider de tema
-├── assets/
-│   └── images/                    # Ícones e imagens
-├── app.config.ts                  # Configuração do Expo
-├── tailwind.config.js             # Configuração Tailwind
-├── theme.config.js                # Paleta de cores
-└── package.json                   # Dependências
-
+/src
+  /components    # Componentes reutilizáveis
+  /screens       # Telas do aplicativo (Login, Dashboard, Details, Profile)
+  /navigation    # Configuração do AppNavigator (Stack + Drawer)
+  /services      # Configurações de serviços externos
+  /hooks         # Hooks customizados (useFetchArtists)
+App.js           # Componente raiz
+firebaseConfig.js # Configuração do Firebase
 ```
 
 ---
 
-##  Requisitos Atendidos
+## ⚙️ Como Executar
 
-###  Parte 1: Lista de Artistas
--  Mínimo 6 artistas com imagens
--  Descrição curta para cada artista
--  Componente `ArtistCard` reutilizável
--  Lista com ScrollView
+1. **Instale as dependências**:
+   ```bash
+   pnpm install
+   ```
 
-###  Parte 2: Interação e Detalhes
--  Tela de detalhes do artista
--  Navegação entre telas
--  Biografias longas (30+ palavras cada)
--  Mínimo 150 palavras totais
--  nformações adicionais (país, anos ativos, popularidade)
+2. **Configure o Firebase**:
+   Edite o arquivo `firebaseConfig.js` com suas credenciais do console do Firebase.
 
-###  Parte 3: Formulário Completo
--  4 TextInputs (Nome, Email, Comentário, Spotify Link)
--  2 Pickers (Gênero, País)
--  2 Sliders (Popularidade, Anos Ativo)
--  2 Switches (Ativo, Recomendado)
--  2 Botões (Enviar, Limpar)
--  Validação e feedback visual
+3. **Inicie o projeto**:
+   ```bash
+   npx expo start
+   ```
 
 ---
 
-**Desenvolvido usando Expo e React Native**
-
----
-
-**USADO MANUS AGENT PARA HOSPEDAGEM E SINTAXE DE ERROS**
-- Tive Problemas ao gerar URL no EXPO EAS (Expo Application Services).
+**Desenvolvido para a 3ª Menção do Projeto de Dispositivos Móveis.**
